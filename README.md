@@ -9,8 +9,10 @@ Veri madenciliği tekniği: Metin madenciliği ve sınıflandırma (duygu analiz
 Kısa yöntem özeti: Eksik veriler temizlenmiş, yorumlar ön işlemden geçmiş, TF-IDF uygulanmış, TextBlob ile duygu analizi yapılmıştır. Ayrıca konu modelleme(LDA) ile şikayet temaları tespit edilmiştir.
 
 Veri Seti Tanıtımı
-Kullanılan veri seti, Kaggle platformunda paylaşılan “Women’s Clothing E-Commerce Reviews veri setidir. E-ticaret, pazarlama alanında bir veri setidir ve 23486 satır ve 10 özellik değişkeni içerir. Toplamda 23.486 müşteri yorumu içermekte olup; ürün tipi, yaş, değerlendirme puanı, olumlu/olumsuz görüş ve yorum metinlerinden oluşmaktadır.
-”(https://www.kaggle.com/datasets/nicapotato/womens-ecommerce-clothing-reviews)
+Kullanılan veri seti, Kaggle platformunda paylaşılan “Women’s Clothing E-Commerce Reviews" veri setidir. E-ticaret, pazarlama alanında bir veri setidir ve 23486 satır ve 10 özellik değişkeni içerir. Toplamda 23.486 müşteri yorumu içermekte olup; ürün tipi, yaş, değerlendirme puanı, olumlu/olumsuz görüş ve yorum metinlerinden oluşmaktadır.
+
+(https://www.kaggle.com/datasets/nicapotato/womens-ecommerce-clothing-reviews)
+
 Veri sütunları:
 	Clothing ID: Ürün kimliği
 	Age: Yorum yapan müşterinin yaşı
@@ -35,7 +37,9 @@ Sınıflandırma (Classification)
 Bu çalışmada, müşteri yorumlarının duygu durumunu belirlemek için metin sınıflandırması yapılmıştır. Yorumlar pozitif ve negatif olarak etiketlenmiş, ardından üç farklı sınıflandırma algoritması denenmiştir.
 Kullanılan Algoritmalar: Naive Bayes, KNN, Decision Tree
 Eğitim/Test Ayrımı: %80 eğitim ve %20 test olacak şekilde ayrılmıştır. 
+
 ![image](https://github.com/user-attachments/assets/c3b80ba8-f3f2-47d9-b1dd-8a331ed30f2b) 
+
 ![image](https://github.com/user-attachments/assets/79ed2d38-9cd0-4cf0-9022-306eb8142e92)
 
 Bulgular
@@ -43,6 +47,7 @@ Naive Bayes, pozitif yorumları çok başarılı şekilde tahmin etmiş (%99 do�
 Decision Tree, hem pozitif hem negatif sınıfı ayırt edebilmiş ve daha dengeli sonuçlar sunmuştur. Özellikle negatif sınıf için f1-score %36 olmasına rağmen, bu değer Naive Bayes’e göre çok daha iyidir.
 Bu nedenle en iyi sonuç Decision Tree algoritmasıyla elde edilmiştir.
 Karar Ağacı Konfüzyon Matrisi ve Karar Ağacı
+
 ![image](https://github.com/user-attachments/assets/e0809cf3-9904-4f63-8d20-00e69c8f34ee)
 
 ![image](https://github.com/user-attachments/assets/2e000a8d-9dc3-4461-88db-2456de868409)
